@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +20,16 @@
 
     --blue: #4EA8DE;
     --blueDark: #1E6F9F;
-    
+
     --danger: #E25858;
 }
 
 body {
     background-color: var(--gray-600);
     -webkit-font-smoothing: antiaLiased;
+    font-size: 1rem;
+}
+
+body, input, button {
+    font-family: 'Inter', sans-serif;
 }
