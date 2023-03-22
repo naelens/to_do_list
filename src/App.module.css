@@ -1,49 +1,9 @@
-.addTask {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
+.wrapper {
+    width: 100%;
+    padding: 0 1rem;
 }
 
-.addTask input[type="text"] {
-    width: 638px;
-    height: 54px;
-    border: none;
-    background-color: var(--gray-500);
-    color: var(--gray-300);
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-700);
-    outline: none;
-    padding: 0 0 0 1rem;
-}
 
-.addTask button[type="submit"] {
-    width: 90px;
-    height: 54px;
-    border-radius: 8px;
-    background-color: var(--blueDark);
-    color: var(--gray-100);
-    font-weight: bold;
-    font-size: 0.875rem;
-    font-weight: bold;
-    border: none;
-    border: 1px solid var(--gray-700); 
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-}
-
-.addTask input[type="text"]:hover {
-    color: var(--gray-200);
-}
-
-.addTask button[type="submit"]:hover {
-    background-color: var(--blue);
-}
 
 
 

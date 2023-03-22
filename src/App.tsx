@@ -1,5 +1,6 @@
-import { PlusCircle } from 'phosphor-react';
-import { Header } from './components/Header';
+import { Header } from './components/Header'
+import { AreaTask } from './components/AreaTask'
+import { AddTask } from './components/Add.Task';
 
 import './global.css';
 
@@ -12,17 +13,12 @@ function App() {
     <div>
       <Header />
 
-      <div className={styles.addTask}>
-          <input type="text" placeholder='Adicionar uma nova tarefa'/>
-          
-          <button type="submit">Criar
-            <PlusCircle size={18}/>
-          </button>
-      </div>
-    </div>
-    
+      <AddTask />
 
- 
+      <main>
+        <AreaTask />
+      </main>
+    </div>
   )
 }
 

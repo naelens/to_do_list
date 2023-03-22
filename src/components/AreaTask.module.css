@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 64px;
+    font-weight: bold;
+}
+
+.taskCreated {
+    color: var(--blueDark);
+}
+
+.taskDone {
+    color: var(--purple);
+}
