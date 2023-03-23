@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     gap: 8px;
+
+    margin-top: -1.6rem;
 }
 
 .addTask input[type="text"] {
-    width: 638px;
+    width: 624px;
     height: 54px;
     border: none;
     background-color: var(--gray-500);
@@ -14,7 +16,7 @@
     border-radius: 8px;
     border: 1px solid var(--gray-700);
     outline: none;
-    padding: 0 0 0 1rem;
+    padding: 1rem;
 }
 
 .addTask button[type="submit"] {

@@ -1,5 +1,7 @@
-.wrapper {
-    width: 100%;
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 1rem;
 }
 

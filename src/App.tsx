@@ -13,12 +13,17 @@ function App() {
     <div>
       <Header />
 
-      <AddTask />
+      <div className={styles.mainContent}>
+        <div>
+          <AddTask />
+        </div>
 
-      <main>
-        <AreaTask />
-      </main>
+        <main>
+          <AreaTask />
+        </main>
+      </div>
     </div>
+
   )
 }
 

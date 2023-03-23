@@ -1,14 +1,47 @@
 .header {
+    max-width: 750px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    padding-top: 64px;
-    font-weight: bold;
+    justify-content: space-between;
+    padding-top: 4rem;
 }
 
 .taskCreated {
-    color: var(--blueDark);
+    color: var(--blue);
+    font-weight: bold;
 }
 
 .taskDone {
     color: var(--purple);
+    font-weight: bold;
 }
+
+.spaceTask {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.spaceTask img {
+    margin-bottom: 1rem;
+}
+
+.contentText strong, span {
+    color: var(--gray-300);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3em;
+}
+
+.spaceTask {
+    padding: 4rem;
+}
+.spaceTask > img {
+    width: 56px;
+} 
