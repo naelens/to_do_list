@@ -7,8 +7,7 @@
 }
 
 .addTask input[type="text"] {
-    width: 624px;
-    height: 54px;
+    width: 39.875rem;
     border: none;
     background-color: var(--gray-500);
     color: var(--gray-300);
@@ -20,8 +19,7 @@
 }
 
 .addTask button[type="submit"] {
-    width: 90px;
-    height: 54px;
+    padding: 1rem;
     border-radius: 8px;
     background-color: var(--blueDark);
     color: var(--gray-100);

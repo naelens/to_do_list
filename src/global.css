@@ -30,6 +30,6 @@ body {
     font-size: 1rem;
 }
 
-body, input, button {
+body, textarea, input, button {
     font-family: 'Inter', sans-serif;
 }

@@ -1,6 +1,6 @@
 import { Header } from './components/Header'
-import { AreaTask } from './components/AreaTask'
-import { AddTask } from './components/Add.Task';
+import { TaskList } from './components/TaskList'
+import { AddTask } from './components/AddTask';
 
 import './global.css';
 
@@ -19,7 +19,7 @@ function App() {
         </div>
 
         <main>
-          <AreaTask />
+          <TaskList />
         </main>
       </div>
     </div>

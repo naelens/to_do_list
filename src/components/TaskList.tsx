@@ -1,6 +1,6 @@
-import styles from './AreaTask.module.css'
+import styles from './TaskList.module.css'
 
-export function AreaTask() {
+export function TaskList() {
     return(
         <div className={styles.areaTask}>
 
