@@ -5,7 +5,11 @@
     padding: 0 1rem;
 }
 
-
+@media (max-width: 474px) {
+    html {
+       font-size: 87.5%;
+    }
+}
 
 
 

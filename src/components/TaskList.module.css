@@ -1,47 +1,86 @@
 .header {
-    max-width: 750px;
+    max-width: 46rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 4rem;
+    padding: 4rem 0 1rem 0;
 }
 
 .taskCreated {
+    display: flex;
+    align-items: center;
     color: var(--blue);
     font-weight: bold;
+    gap: 8px;
+}
+
+.taskCreated span {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100%;
+    background: var(--gray-400);
+    color: var(--gray-100);
 }
 
 .taskDone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--purple);
-    font-weight: bold;
+    font-weight: bold; 
 }
 
-.spaceTask {
-    max-width: 750px;
-    margin: 0 auto;
+.taskDone span {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100%;
+    background: var(--gray-400);
+    color: var(--gray-100);
+}
+
+.taskLists {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;;
     border-top: 1px solid var(--gray-400);
     border-radius: 8px;
-    margin-top: 1.5rem;
+
+    max-width: 46rem;
+    margin: 0 auto;
 }
 
-.spaceTask img {
-    margin-bottom: 1rem;
-}
-
-.contentText strong, span {
-    color: var(--gray-300);
+.taskListContent {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    line-height: 1.3em;
+    
+    padding: 4rem 2rem;
 }
 
-.spaceTask {
-    padding: 4rem;
+.contentImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.contentParagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 1rem;
+    line-height: 1.4;
+    color: var(--gray-300);
+}
+
+
 .spaceTask > img {
-    width: 56px;
+    width: 3.5rem;
 } 
+
+@media (max-width: 474px) {
+    .contentParagraph > span {
+       font-size: 87.5%;
+       margin-top: 0.2rem;
+    }
+ }

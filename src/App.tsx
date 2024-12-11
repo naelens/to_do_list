@@ -1,30 +1,22 @@
 import { Header } from './components/Header'
 import { TaskList } from './components/TaskList'
-import { AddTask } from './components/AddTask';
-
+import { Form } from './components/Form';
 import './global.css';
-
 import styles from './App.module.css'
 
 
-function App() {
+export function App() {
   return (
-
     <div>
       <Header />
 
       <div className={styles.mainContent}>
-        <div>
-          <AddTask />
-        </div>
-
+        <Form />
+       
         <main>
           <TaskList />
         </main>
       </div>
     </div>
-
   )
 }
-
-export default App
