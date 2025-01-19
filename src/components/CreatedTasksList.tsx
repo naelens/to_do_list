@@ -2,10 +2,10 @@ import styles from './CreatedTasksList.module.css'
 import { Trash } from 'phosphor-react'
 
 interface TasksProps {
-    tasks: string[]
+    taskList: string[]
 }
 
-export function CreatedTasksList({ tasks }: TasksProps) {
+export function CreatedTasksList({ taskList }: TasksProps) {
     return(
         <div className={styles.areaTask}>
             <header className={styles.header}>
@@ -19,8 +19,8 @@ export function CreatedTasksList({ tasks }: TasksProps) {
                     <span>0</span>
                 </div>
             </header>
-            {tasks.length > 0 ? (
-                tasks.map((task) => (
+            {taskList.length > 0 ? (
+                taskList.map((task) => (
                     <div className={styles.containerTask}>
                          <div className={styles.createTask}>
                             <div className={styles.description_task}>

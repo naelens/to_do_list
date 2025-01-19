@@ -3,16 +3,21 @@ import styles from './Form.module.css'
 import { useState } from 'react'
 import { CreatedTasksList } from './CreatedTasksList'
 
-export function Form() {
+interface TasksProps {
+  taskList: string[];
+}
+
+export function Form({ taskList }: TasksProps) {
     const [tasks, setTasks] = useState<string[]>([])
     const [inputValue, setInputValue] = useState("")
-    //const [taskCreatedCounter, setTaskCreatedCounter] = useState(0)
+    const [taskCreatedCounter, setTaskCreatedCounter] = useState<number>(0)
 
     function handleNewTask() {
         event?.preventDefault()
         setTasks([...tasks])
+        setTaskCreatedCounter(taskCreatedCounter + 1)
     }
-    
+
     return(
       <div>
         <form className={styles.addTask}>
@@ -37,7 +42,7 @@ export function Form() {
 
         <div>
           <CreatedTasksList 
-          tasks={tasks} 
+          taskList={tasks} 
           />
         </div>
       </div>
