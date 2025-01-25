@@ -1,17 +1,19 @@
 import styles from './CreatedTasksList.module.css'
 import { Trash } from 'phosphor-react'
+import { Task } from './Form';
 
 interface TasksProps {
-    taskList: string[]
+    taskList: Task[]
+    onRemoveTask: (n: number) => void;
 }
 
-export function CreatedTasksList({ taskList }: TasksProps) {
+export function CreatedTasksList({ taskList, onRemoveTask }: TasksProps) {
     return(
         <div className={styles.areaTask}>
             <header className={styles.header}>
                 <div className={styles.taskCreated}>
-                    <p>Adicionadas</p>
-                    <span>0</span>
+                    <p>Adicionada</p>
+                    <span>{taskList.length}</span>
                 </div>
 
                 <div className={styles.taskDone}>
@@ -20,16 +22,17 @@ export function CreatedTasksList({ taskList }: TasksProps) {
                 </div>
             </header>
             {taskList.length > 0 ? (
-                taskList.map((task) => (
-                    <div className={styles.containerTask}>
+                taskList.map((task, id) => (
+                    <div key={task.id} className={styles.containerTask}>
                          <div className={styles.createTask}>
                             <div className={styles.description_task}>
                                 <input type="radio" checked />
-                                <span>{task}</span>
+                                <span>{task.text}</span>
                             </div>
     
                             <button 
                                 title="Deletar tarefa"
+                                onClick={() => onRemoveTask(task.id)}
                             >
                                 <Trash size={20} />
                             </button>

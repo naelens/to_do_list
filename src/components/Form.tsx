@@ -3,19 +3,28 @@ import styles from './Form.module.css'
 import { useState } from 'react'
 import { CreatedTasksList } from './CreatedTasksList'
 
+export interface Task {
+  id: number;
+  text: string;
+  isChecked: boolean;
+}
+
 interface TasksProps {
-  taskList: string[];
+  taskList: Task[];
 }
 
 export function Form({ taskList }: TasksProps) {
-    const [tasks, setTasks] = useState<string[]>([])
+    const [tasks, setTasks] = useState<Task[]>([])
     const [inputValue, setInputValue] = useState("")
-    const [taskCreatedCounter, setTaskCreatedCounter] = useState<number>(0)
 
     function handleNewTask() {
         event?.preventDefault()
         setTasks([...tasks])
-        setTaskCreatedCounter(taskCreatedCounter + 1)
+    }
+
+    function handleRemoveTask(id: number) {
+      const filteredTasks = tasks.filter((task) => task.id !== id)
+      setTasks(filteredTasks)
     }
 
     return(
@@ -32,7 +41,11 @@ export function Form({ taskList }: TasksProps) {
             type="submit"
             onClick={(event) => {
               event.preventDefault()
-              setTasks([inputValue, ...tasks])
+              setTasks([{
+                id: tasks.length,
+                text: inputValue,
+                isChecked: false,
+              },...tasks])
               setInputValue("")
             }}
             >Criar
@@ -42,7 +55,8 @@ export function Form({ taskList }: TasksProps) {
 
         <div>
           <CreatedTasksList 
-          taskList={tasks} 
+          taskList={tasks}
+          onRemoveTask={handleRemoveTask}
           />
         </div>
       </div>
