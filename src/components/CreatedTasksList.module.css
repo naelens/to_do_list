@@ -2,8 +2,6 @@
     max-width: 46rem;
     margin: 0 auto;
     padding-top: 1rem;
-    border-top: 1px solid var(--gray-400);
-    border-radius: 8px;
 }
 
 .createTask {
@@ -50,6 +48,7 @@
     display: flex;
     justify-content: space-between;
     padding: 3rem 0 1rem 0;
+    border-bottom: 1px solid var(--gray-400);
 }
 
 .taskCreated {
