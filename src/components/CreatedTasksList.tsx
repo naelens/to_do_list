@@ -50,10 +50,6 @@ export function CreatedTasksList({ taskList, onRemoveTask, onTaskStatus, onCompl
                 ): (
                 <div className={styles.taskLists}>
                     <div className={styles.taskListContent}>
-                        <div className={styles.contentImage}>
-                            <img src="../src/assets/task.svg" />
-                        </div>
-
                         <div className={styles.contentParagraph}>
                             <span><strong>Você ainda não tem tarefas cadastradas</strong></span>
                             <span>Crie tarefas e organize seus itens a fazer</span>

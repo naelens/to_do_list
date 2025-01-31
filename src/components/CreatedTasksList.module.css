@@ -105,12 +105,6 @@
     padding: 3rem 2rem;
 }
 
-.contentImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .contentParagraph {
     display: flex;
     justify-content: center;

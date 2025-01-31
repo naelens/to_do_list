@@ -13,7 +13,7 @@ interface TasksProps {
   taskList: Task[];
 }
 
-export function Form({ taskList }: TasksProps) {
+export function Form() {
     const [tasks, setTasks] = useState<Task[]>([])
     const [inputValue, setInputValue] = useState("")
 
