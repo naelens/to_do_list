@@ -27,6 +27,21 @@ export function Form({ taskList }: TasksProps) {
       setTasks(filteredTasks)
     }
 
+    function handleTaskStatus({ id, value}: {id: number; value: boolean}){
+      const taskStatus = tasks.map((task) => {
+        if(task.id === id) {
+          return {...task, isChecked: value}
+        }
+        return {...task}
+      })
+      setTasks(taskStatus)
+    }
+
+    function countCompletedTask() {
+      return tasks.filter(task => task.isChecked).length;
+    }
+
+
     return(
       <div>
         <form className={styles.addTask}>
@@ -57,6 +72,8 @@ export function Form({ taskList }: TasksProps) {
           <CreatedTasksList 
           taskList={tasks}
           onRemoveTask={handleRemoveTask}
+          onTaskStatus={handleTaskStatus}
+          onCompletedTask={countCompletedTask}
           />
         </div>
       </div>

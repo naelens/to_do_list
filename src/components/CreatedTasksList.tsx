@@ -1,13 +1,17 @@
 import styles from './CreatedTasksList.module.css'
+import { useState } from 'react';
 import { Trash } from 'phosphor-react'
 import { Task } from './Form';
 
 interface TasksProps {
     taskList: Task[]
     onRemoveTask: (n: number) => void;
+    onTaskStatus: ({ id, value }: { id: number; value: boolean }) => void;
+    onCompletedTask: () => number;
 }
 
-export function CreatedTasksList({ taskList, onRemoveTask }: TasksProps) {
+export function CreatedTasksList({ taskList, onRemoveTask, onTaskStatus, onCompletedTask }: TasksProps) {
+    
     return(
         <div className={styles.areaTask}>
             <header className={styles.header}>
@@ -18,15 +22,19 @@ export function CreatedTasksList({ taskList, onRemoveTask }: TasksProps) {
 
                 <div className={styles.taskDone}>
                     <p>Concluídas</p>
-                    <span>0</span>
+                    <span>{onCompletedTask()}</span>
                 </div>
             </header>
-            {taskList.length > 0 ? (
+            <div className={styles.containerMain}>
+                {taskList.length > 0 ? (
                 taskList.map((task, id) => (
                     <div key={task.id} className={styles.containerTask}>
                          <div className={styles.createTask}>
                             <div className={styles.description_task}>
-                                <input type="radio" checked />
+                                <input className={styles.checkbox} 
+                                    type="checkbox" 
+                                    onClick={() => onTaskStatus({ id: task.id, value: !task.isChecked })}
+                                />
                                 <span>{task.text}</span>
                             </div>
     
@@ -39,7 +47,7 @@ export function CreatedTasksList({ taskList, onRemoveTask }: TasksProps) {
                         </div>
                     </div>
                 ))
-            ): (
+                ): (
                 <div className={styles.taskLists}>
                     <div className={styles.taskListContent}>
                         <div className={styles.contentImage}>
@@ -52,7 +60,8 @@ export function CreatedTasksList({ taskList, onRemoveTask }: TasksProps) {
                         </div>
                     </div>
                 </div>
-            )}
+                )}
+            </div>  
         </div>
     )
 }
