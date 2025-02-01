@@ -42,3 +42,8 @@
 .addTask button[type="submit"]:hover {
     background-color: var(--blue);
 }
+
+.addTask button:disabled {
+    opacity:0.8;
+    cursor: not-allowed;
+}

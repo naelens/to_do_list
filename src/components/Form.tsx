@@ -41,6 +41,7 @@ export function Form() {
       return tasks.filter(task => task.isChecked).length;
     }
 
+    const isInputEmpty = inputValue.length === 0;
 
     return(
       <div>
@@ -54,6 +55,7 @@ export function Form() {
           
           <button 
             type="submit"
+            disabled={isInputEmpty}
             onClick={(event) => {
               event.preventDefault()
               setTasks([{
